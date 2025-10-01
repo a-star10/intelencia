@@ -1,0 +1,17 @@
+﻿# GUI Desktop
+customtkinter==5.2.0
+pillow==10.0.1
+
+# Data Management
+pandas==2.1.1
+openpyxl==3.1.2
+
+# Charts & Visualization
+matplotlib==3.7.2
+
+# Date & Time
+python-dateutil==2.8.2
+
+# Development Tools
+pytest==7.4.2
+black==23.7.0
