@@ -251,7 +251,7 @@ class ModernSettingsView:
     
     def create_sidebar(self, parent):
         """Sidebar de navigation"""
-        sidebar = ctk.CTkFrame(parent, width=250, fg_color=("gray95", "gray20"), corner_radius=15)
+        sidebar = ctk.CTkScrollableFrame(parent, width=250, fg_color=("gray95", "gray20"), corner_radius=15)
         sidebar.pack(side="left", fill="y", pady=0)
         
         # User badge en haut
@@ -263,11 +263,11 @@ class ModernSettingsView:
             role_emojis = {'admin': '👑', 'manager': '👔', 'operator': '💼', 'viewer': '👁️'}
             emoji = role_emojis.get(user.get('role', 'viewer'), '👤')
             
-            ctk.CTkLabel(user_card, text=emoji, font=ctk.CTkFont(size=32)).pack(pady=(12, 5))
+            ctk.CTkLabel(user_card, text=emoji, font=ctk.CTkFont(size=32)).pack(pady=(15, 5))
             ctk.CTkLabel(user_card, text=user.get('username', 'N/A'), font=ctk.CTkFont(size=14, weight="bold")).pack()
             
             role_name = auth_manager.ROLES.get(user.get('role'), {}).get('name', 'Inconnu')
-            ctk.CTkLabel(user_card, text=role_name, font=ctk.CTkFont(size=10), text_color=("gray60", "gray50")).pack(pady=(0, 12))
+            ctk.CTkLabel(user_card, text=role_name, font=ctk.CTkFont(size=10), text_color=("gray60", "gray50")).pack(pady=(0, 15))
         
         # Label Navigation
         ctk.CTkLabel(
@@ -276,7 +276,7 @@ class ModernSettingsView:
             font=ctk.CTkFont(size=10, weight="bold"),
             text_color=("gray60", "gray50"),
             anchor="w"
-        ).pack(fill="x", padx=20, pady=(8, 5))
+        ).pack(fill="x", padx=20, pady=(10, 5))
         
         # Catégories de navigation
         categories = [
@@ -297,7 +297,7 @@ class ModernSettingsView:
             btn = ctk.CTkButton(
                 sidebar,
                 text=f"{icon}  {label}",
-                height=42,
+                height=45,
                 font=ctk.CTkFont(size=13),
                 fg_color="transparent",
                 hover_color=("gray85", "gray30"),
@@ -307,11 +307,8 @@ class ModernSettingsView:
             btn.pack(fill="x", padx=10, pady=2)
             self.nav_buttons[cat_id] = btn
         
-        # Spacer pour pousser "Autres" en bas
-        ctk.CTkFrame(sidebar, fg_color="transparent").pack(fill="both", expand=True)
-        
         # Divider
-        ctk.CTkFrame(sidebar, height=1, fg_color=("gray80", "gray30")).pack(fill="x", padx=15, pady=10)
+        ctk.CTkFrame(sidebar, height=1, fg_color=("gray80", "gray30")).pack(fill="x", padx=15, pady=15)
         
         # Label Autres
         ctk.CTkLabel(
@@ -326,14 +323,14 @@ class ModernSettingsView:
         self.backup_btn = ctk.CTkButton(
             sidebar,
             text="💾 Sauvegarde",
-            height=42,
+            height=45,
             font=ctk.CTkFont(size=13),
             fg_color="transparent",
             hover_color=("gray85", "gray30"),
             anchor="w",
             command=lambda: self.load_category("backup")
         )
-        self.backup_btn.pack(fill="x", padx=10, pady=(2, 15))
+        self.backup_btn.pack(fill="x", padx=10, pady=2)
         
         # Marquer le bouton actif
         self.highlight_active_button("general")

@@ -52,7 +52,7 @@ class RuleForm:
         
         self.window = ctk.CTkToplevel(self.app.root)
         self.window.title(title)
-        self.window.geometry("900x950")
+        self.window.geometry("700x500")
         self.window.transient(self.app.root)
         self.window.grab_set()
         

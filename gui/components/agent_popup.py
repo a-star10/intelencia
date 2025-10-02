@@ -8,7 +8,7 @@ def show_agent_popup(app, agent):
     """Afficher une popup avec les détails de l'agent"""
     popup = ctk.CTkToplevel(app.root)
     popup.title(f"Détails - {agent.get('nom', '')} {agent.get('prenom', '')}")
-    popup.geometry("600x700")
+    popup.geometry("700x500")
     popup.transient(app.root)
     popup.grab_set()
     

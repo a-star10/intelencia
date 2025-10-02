@@ -171,7 +171,7 @@ class LoginWindow:
         self.loading = None
         
         # Config - HAUTEUR AUGMENTÉE POUR VOIR LE BOUTON
-        self.window.title("Military Career Manager")
+        self.window.title("DGSS")
         self.window.geometry("480x700")
         self.window.resizable(False, False)
         
@@ -211,7 +211,7 @@ class LoginWindow:
         # Icône élégante
         icon = ctk.CTkLabel(
             logo_frame,
-            text="🛡️",
+            text="DGSS",
             font=ctk.CTkFont(size=60)
         )
         icon.pack(pady=(0, 15))
@@ -219,7 +219,7 @@ class LoginWindow:
         # Titre épuré
         title = ctk.CTkLabel(
             logo_frame,
-            text="MILITARY CAREER",
+            text="DGSS",
             font=ctk.CTkFont(size=22, weight="bold"),
             text_color=self.accent_color
         )

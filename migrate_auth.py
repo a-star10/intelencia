@@ -72,7 +72,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 def main():
     \"\"\"Point d'entree principal avec authentification\"\"\"
     try:
-        print("Demarrage de Military Career Manager...")
+        print("Demarrage du Système...")
         
         # Import dynamique
         from gui.login_window import show_login

@@ -1,0 +1,19 @@
+{
+    "theme": "dark",
+    "accent_color": "green",
+    "display_mode": "normal",
+    "global_font_size": "normal",
+    "table_font_size": 9,
+    "title_font_size": 20,
+    "logo_path": "assets/logo.png",
+    "logo_size": 180,
+    "use_custom_logo": false,
+    "rows_per_page": 30,
+    "alternate_row_colors": true,
+    "row_spacing": "normal",
+    "show_stats_cards": true,
+    "stats_card_style": "detailed",
+    "show_quick_actions": true,
+    "auto_save": true,
+    "show_tooltips": true
+}

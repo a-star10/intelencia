@@ -14,7 +14,7 @@ EXPORTS_DIR = DATA_DIR / "exports"
 DATABASE_PATH = DATA_DIR / "military_careers.db"
 
 # Interface
-APP_TITLE = "Military Career Manager"
+APP_TITLE = "Direction Generale des Services Speciaux"
 APP_VERSION = "1.0.0"
 WINDOW_SIZE = "1400x900"
 MIN_WINDOW_SIZE = "1200x700"
